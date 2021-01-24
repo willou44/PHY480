@@ -1,0 +1,47 @@
+1. W want to be more specific for readability in the future.
+
+2. It adds and endline to the end of the program.
+
+3. They aren't noticed until the program reaches a variable that it can't understand based on things previously declared.
+
+4. Plug in 1, and 1/pi^2
+	I can do all of them with a bit of googling
+
+5. Works!
+
+6. Differences: Value of pi, py takes a string and converts it to a float, uses square functionality instead of double multiply by r
+
+---------Overflows, Underflows, and Machine Precision---------
+
+1. the output flows both to the screen through cout and to a file through flow_out
+	1. underflow for float:  1.1755*10^-38   overflow: 3.4028*10^38
+	2. underflow for double: 2.2251*10^-308, overflow: 8.9885*10^307, -1.7977*10^308
+2. 
+	1. 1.46012064536e-25
+	2. 1.46012119457e-25
+Machine precision is the smallest value that the computer is able to increment values of a type by, and we find it by trying to generate a smaller and smaller number until we stop decreasing.
+
+---------Using a Makefile---------
+
+Success!
+
+---------Using the GSL Scientific Library---------
+
+1. We could plug in different values and compare them, OR we could use this code bit to generate a lot of answers and graph them!
+2. Yep!
+3. J0(3) = -0.260051954901933446
+4. Yep!
+5. You could have an input instead of a hard coded value, it could output to a file so that you could also do lists of values to get lists of answers back, and you could write it so the execution isnt so weird by putting files together.
+
+
+
+
+
+
+
+
+
+
+
+
+
