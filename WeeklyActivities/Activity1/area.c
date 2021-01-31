@@ -24,6 +24,7 @@ main()
 { 
    double radius, area;                           /* define variables */
 
+   printf("Enter the radius of a circle \n");     /* ask for radius */
    scanf("%lf", &radius);                         /* read in radius  */
 
    area = radius * radius * PI;                   /* area formula */

@@ -1,0 +1,44 @@
+-----Round-Off Errors with Quadratic Equations-----
+2. First and foremost, formatting matters a lot, depending on what kind of program and what kind of editor you are using. Whitespace alone can cause a lot of issuese when compilin the code, however formatting is also important for readability.
+
+3. 
+error: ‘out’ was not declared in this scope
+   43 | out << "a = " << a << ", b = " << b << ", c = " << c;
+
+error: ‘disc’ was not declared in this scope
+   45 | disc = pow (b * b - 4. * a * c, 0.5); 
+
+error: ‘setprecision’ was not declared in this scope
+   53 | cout << fixed << setprecision (16) << x1 << "   " << x2;
+
+error: unused variable ‘x1p’ [-Werror=unused-variable]
+   48 | float x1p = -2. * c / (b + disc);
+
+error: unused variable ‘x2p’ [-Werror=unused-variable]
+   50 | float x2p = (-2. * c) / (b - disc);
+
+
+-----Summing in Different Orders-----
+1. You would just get 1, because a is too small to represent in single. Answer: 1.000000000000000
+2. I think that a might get rounded up a decimal or something like that, so you might get somethwere from 1.5 to 2.0? Answer: 1.532383680343628
+
+3. In double, I think they'll be exactly 1.5 for both. Answer: up: 1.4999999992, Down: 1.4999999999
+
+
+4. ############pseudocode##########
+up and down both start at 1
+for 10000000 times,
+	up = use the up from last time and add 5*10^-8
+
+	down = take 5*10^-8 and add the down from last time
+#######
+similar, only difference is where we add 1
+7. Single:
+	Up: I don't think it will change, because the same applies. (RIGHT)
+	Down: It will be higher, somewhere but not above 2.0 still (ALMOST RIGHT, its IS 2.0!)
+   Double:
+	Up: Will be close to six, but... (RIGHT)
+	Down: This will be even CLOSER to six! (RIGHT)
+
+-----Bessel 1: Making Another Plot with Gnuplot-----
+I was able to complete 1 and 2, however for some reason my terminal cannot connect to the x display, i've tried uninstalling and reinstalling it, but will continue to look for a solution.
