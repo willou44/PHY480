@@ -1,0 +1,41 @@
+
+Comparing Floating Point Numbers
+
+1. Calculates the tangent of 45 (cos(pi/4.)/sin(pi/4.)) , which should be 1, and compares it to 1
+
+2. 
+Added above the ifs: 
+cout << fixed << setprecision (16) <<"x1: " << x1 <<" x2: "<< x2 << endl;
+
+output:
+x1: 0.9999999403953552 x2: 1.0000000000000000
+ x1 and x2 are not equal
+
+It doesn't get exactly 1 for the tangent of 45 because of machine precision rounding, likely in all three steps (both the sine and cosine, as well as their division.)
+
+3. By generating two values for each that we are comparing (e.g. our value plus the eps and our value minus eps) and check if they are within eachother's range.
+
+
+Numerical Derivatives: Pass 1
+1. The code is outputting the base 10 logs for h, the forward difference, and the central difference.
+
+4. Yes, they are, and the central diff is better, which we can tell by the lower slope and more consistance nature of it's power relationship to log10(h).
+
+
+
+Makefiles for multiple project files (including header file)
+1. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
