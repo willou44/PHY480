@@ -1,0 +1,54 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2577
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Chalkduster;}
+{\colortbl;\red255\green255\blue255;\red251\green0\blue7;}
+{\*\expandedcolortbl;;\cssrgb\c100000\c12195\c0;}
+\margl1440\margr1440\vieww13440\viewh7800\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+
+\f1 \cf2 Grade: check - (complete missing sections to upgrade)
+\f0 \cf0 \
+Comparing Floating Point Numbers\
+\
+1. Calculates the tangent of 45 (cos(pi/4.)/sin(pi/4.)) , which should be 1, and compares it to 1\
+\
+2. \
+Added above the ifs: \
+cout << fixed << setprecision (16) <<"x1: " << x1 <<" x2: "<< x2 << endl;\
+\
+output:\
+x1: 0.9999999403953552 x2: 1.0000000000000000\
+ x1 and x2 are not equal\
+\
+It doesn't get exactly 1 for the tangent of 45 because of machine precision rounding, likely in all three steps (both the sine and cosine, as well as their division.)\
+\
+3. By generating two values for each that we are comparing (e.g. our value plus the eps and our value minus eps) and check if they are within eachother's range.\
+\
+\
+Numerical Derivatives: Pass 1\
+1. The code is outputting the base 10 logs for h, the forward difference, and the central difference.\
+\
+4. Yes, they are, and the central diff is better, which we can tell by the lower slope and more consistance nature of it's power relationship to log10(h).\
+\
+
+\f1 \cf2 missing questions\'85
+\f0 \cf0 \
+\
+Makefiles for multiple project files (including header file)\
+1. \
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+}
