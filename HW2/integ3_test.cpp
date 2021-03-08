@@ -22,7 +22,16 @@
 #include <iostream>
 #include <iomanip>
 #include <fstream>
+//  integ3_test.cpp contains testing code for integ3.cpp
+//
+//  Revision History:
+//    07-03-2021--- original version, based on integ_test.cpp by Dick Furnstahl  furnstahl.1@osu.edu
+//
+//************************************************************************
+
+
 #include <cmath>
+
 using namespace std;
 
 #include "integ3.h"	// prototypes for integration routines
@@ -46,7 +55,7 @@ main ()
 
   // open the output file stream
   ofstream integ_out ("integ3.dat");	// save data in integ3.dat
-  integ_out << "#  N   Simpsons      " << endl;
+  integ_out << "#  N   Simpsons      Milnes" << endl;
   integ_out << "#-----------------------------------------" << endl;
 
   // Simpson's rule requires an odd number of intervals  
@@ -55,6 +64,9 @@ main ()
     integ_out << setw(4) << i;
 
     result = simpsons_rule (i, lower, upper, &my_integrand);
+    integ_out << "  " << scientific << fabs (result - answer);
+
+    result = milne_rule (i, lower, upper, &my_integrand);
     integ_out << "  " << scientific << fabs (result - answer);
 
     integ_out << endl;
@@ -72,5 +84,5 @@ main ()
 double
 my_integrand (double x)
 {
-  return (exp (-x));
+  return (exp(exp (-x)));
 }
