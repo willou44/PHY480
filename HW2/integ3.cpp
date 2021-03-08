@@ -1,12 +1,15 @@
-//  integ3.cpp contains three integration functions, simpson, milne, and 
+//  integ3.cpp contains the integration functions for simpson and milne
 //
 //  Revision History:
-//    07-03-2021--- original version, based on integ_routines.cpp by Dick Furnstahl  furnstahl.1@osu.edu
-//
+//	07-03-2021: original version, based on integ_test.cpp by Dick Furnstahl  furnstahl.1@osu.edu
+//	08-03-2021: Added full milne function	
 //************************************************************************
 
 #include <cmath>
 #include "integ3.h"	// prototypes for integration routines
+#include <stdio.h>
+//#include <gsl_integration.h>
+
 
 // Integration using Simpson's rule
 double simpsons_rule ( int num_pts, double x_min, double x_max, 
