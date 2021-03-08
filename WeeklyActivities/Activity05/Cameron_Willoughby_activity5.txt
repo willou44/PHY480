@@ -1,0 +1,62 @@
+----------------------------------------------------------------------------------
+Optional: Aliases in Your Start-up Shell
+----------------------------------------------------------------------------------
+
+alias phy='cd PHY480'
+
+----------------------------------------------------------------------------------
+Nan's and Inf's
+----------------------------------------------------------------------------------
+
+Pretty sure that 0.*(1./0.) will be nan (result is -nan)
+
+----------------------------------------------------------------------------------
+Bound States by Matrix Diagonalization in Coordinate Representation
+----------------------------------------------------------------------------------
+
+1. We can verify by plugging in our test values into the equations shown in the for loop
+
+Enter maximum radius (Rmax): 1
+Enter the number of steps (N): 20
+eigenvalue 1 = 9.919925e+00
+eigenvalue 2 = 3.923497e+01
+
+
+Enter maximum radius (Rmax): 2
+Enter the number of steps (N): 20
+eigenvalue 1 = 2.740537e+00
+eigenvalue 2 = 1.011051e+01
+
+Enter maximum radius (Rmax): 2
+Enter the number of steps (N): 30
+eigenvalue 1 = 2.743379e+00
+eigenvalue 2 = 1.015543e+01
+
+Enter maximum radius (Rmax): 3
+Enter the number of steps (N): 40
+eigenvalue 1 = 1.683822e+00
+eigenvalue 2 = 5.110384e+00
+
+Enter maximum radius (Rmax): 4
+Enter the number of steps (N): 40
+eigenvalue 1 = 1.512700e+00
+eigenvalue 2 = 3.775453e+00
+
+2. Plot name: eigen_tridiagonal.png
+
+u(0) should be 0
+
+
+3. u approaches 0 after Rmax reaches 6, so Rmax = 6
+
+
+./eigen_tridiagonal.x
+
+
+
+
+
+
+
+
+
