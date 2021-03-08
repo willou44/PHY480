@@ -1,5 +1,1 @@
-g++ -o integ3.exe integ3.cpp
-
 make -f make_integ3_test.txt
-
-C:\Users\User\Documents\GitHub\PHY480

@@ -1,3 +1,10 @@
+//  integ3.cpp contains three integration functions, simpson, milne, and 
+//
+//  Revision History:
+//    07-03-2021--- original version, based on integ_routines.cpp by Dick Furnstahl  furnstahl.1@osu.edu
+//
+//************************************************************************
+
 #include <cmath>
 #include "integ3.h"	// prototypes for integration routines
 
@@ -23,5 +30,22 @@ double simpsons_rule ( int num_pts, double x_min, double x_max,
    
    return (sum);
 }  
+
+double milne_rule ( int num_pts, double x_min, double x_max, 
+                       double (*integrand) (double x) )
+{
+   double interval = ((x_max - x_min)/ double(num_pts - 1));  // called h in notes
+   double sum=  0.;  // initialize integration sum to zero		 
+
+   for (int n=2; n<num_pts; n++)          // sum the midpoint contributions 
+   {
+     double x = x_min + interval * double(n-1);      
+     sum += interval * integrand(x);
+   }
+   // add in the endpoint contributions 
+   sum +=  (interval/2.) * (integrand(x_min) + integrand(x_max));	
+ 
+   return (sum);
+}      
 
 //************************************************************************

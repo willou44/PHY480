@@ -45,7 +45,7 @@ main ()
   double result = 0.;  // approximate answer
 
   // open the output file stream
-  ofstream integ_out ("integ.dat");	// save data in integ.dat
+  ofstream integ_out ("integ3.dat");	// save data in integ3.dat
   integ_out << "#  N   Simpsons      " << endl;
   integ_out << "#-----------------------------------------" << endl;
 
@@ -60,7 +60,7 @@ main ()
     integ_out << endl;
   }
 
-  cout << "data stored in integ.dat\n";
+  cout << "data stored in integ3.dat\n";
   integ_out.close ();
 
   return (0);

@@ -1,22 +1,12 @@
-//  file: integ_routines.h
-// 
-//  Header file for integ_routines.cpp
-//
-//
-//  Programmer:  Dick Furnstahl  furnstahl.1@osu.edu
+//  integ3.h contains the prototypes for integration functions
 //
 //  Revision History:
-//    05-Jan-2004 --- original version, based on C version
-//    08-Jan-2005 --- function to be integrated now passed, changed names
-//    09-Jan-2011 --- changed function names
-//
-//  To do:
+//    07-03-2021--- original version, based on integ_routines.h by Dick Furnstahl  furnstahl.1@osu.edu
 //
 //************************************************************************
-
-//  begin: function prototypes 
  
 extern double simpsons_rule ( int num_pts, double x_min, double x_max, 
                        double (*integrand) (double x) );    // Simpson's rule 
 
-//  end: function prototypes 
+extern double milne_rule ( int num_pts, double x_min, double x_max, 
+                       double (*integrand) (double x) );    // Milne's rule 
