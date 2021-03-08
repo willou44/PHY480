@@ -84,5 +84,5 @@ main ()
 double
 my_integrand (double x)
 {
-  return (exp(exp (-x)));
+  return (exp(4*x/3));
 }
