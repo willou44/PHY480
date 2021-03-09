@@ -1,0 +1,17 @@
+make -f make_eigen_tridiagonal_class
+
+./eigen_tridiagonal_class.x
+
+Wrapping GSL Functions: eigen_tridiagonal_class
+1. All of the gsl function calls are now in the Hamiltonian class which is in the file GslHamiltonian.h
+This is better because this class is now easilly portable to many programs, as well as a decent template for other classes one might make.
+
+2. Yes, the code still works!
+
+3. I would make a function for loading the matrix and for printing the results
+
+
+Introduction to Parallel Processing with OpenMP
+
+1. Intel® Core™ i7-5500U Processor has 2 cores with 4 available threads
+
