@@ -48,7 +48,7 @@ main (void)
   const int N = 1;		// size of arrays of y functions
   double y_euler[N], y_rk4[N];	// arrays of y functions 
 
-  ofstream out ("diffeq_test.dat");	// open the output file 
+  ofstream out ("diffeq_testTimesTen.dat");	// open the output file 
 
   funct_parameters.alpha = 1.;	// function parameter to be passed 
   funct_parameters.beta = 1.;	// function parameter to be passed
@@ -64,9 +64,10 @@ main (void)
   out << scientific << setprecision (9)
     << tmin << "  "
     << y_euler[0] << "  "
-    << y_rk4[0] << "  " << exact_answer (tmin, params_ptr) << endl;
+    << y_rk4[0] << "  " 
+    << exact_answer (tmin, params_ptr) << endl;
 
-  double h = 0.1;		// initialize mesh spacing 
+  double h = 1.0;		// initialize mesh spacing 
 
   for (double t = tmin; t <= tmax; t += h)
   {

@@ -1,7 +1,3 @@
-make -f make_eigen_tridiagonal_class
-
-./eigen_tridiagonal_class.x
-
 Wrapping GSL Functions: eigen_tridiagonal_class
 1. All of the gsl function calls are now in the Hamiltonian class which is in the file GslHamiltonian.h
 This is better because this class is now easilly portable to many programs, as well as a decent template for other classes one might make.
@@ -14,4 +10,62 @@ This is better because this class is now easilly portable to many programs, as w
 Introduction to Parallel Processing with OpenMP
 
 1. Intel® Core™ i7-5500U Processor has 2 cores with 4 available threads
+
+2. The section from the line after the #pragma to the end of the main function.
+
+3. 
+2 threads:
+num_time(s) = 14.8502
+real    0m14.945s
+user    0m29.031s
+
+1 thread:
+num_time(s) = 25.5179
+real    0m25.595s
+user    0m25.203s
+
+4. 4 threads:
+num_time(s) = 11.0265
+real    0m11.107s
+user    0m32.452s
+
+It doesn't scale well, I imagine that's just because it's a smaller actual decrease in work on each thread the more you have (1->2 50% decrease, 1->4 75%).
+
+Integrating a First-Order Differential Equation
+
+3. I can conclude that while the euler method is very close, this 4th-order-Runge-Kutta is so spot onto the exact that I almost thought it hadn't been plotted.
+
+4. -a * t * y[0]
+
+5. The error is extremely minimal here.
+
+6. 
+
+___________________________Scrath Pad_______________________________________
+
+make -f make_eigen_tridiagonal_class
+
+./eigen_tridiagonal_class.x
+
+
+
+g++ -fopenmp -o simpson_cosint_openmp simpson_cosint_openmp.cpp -lgomp
+time ./simpson_cosint_openmp.exe
+
+// A handy trick to write Pi to many digits
+double Pi = 4.*atan(1.);
+set term png
+set out "diffeq_test.png"
+load "diffeq_test.plt"
+
+
+make -f make_diffeq_test
+
+./diffeq_test.x
+
+
+
+
+
+
 
