@@ -2,7 +2,8 @@
 
 
 # simple plot versus time
-set term x11 1 title "Time Dependence"  # plot window 1
+set term png
+set output "diffeq_oscillations_all1.png"
 set timestamp
 set title 'Oscillations: Time Dependence'
 pi = 3.141592653589793
@@ -17,7 +18,7 @@ plot "diffeq_oscillations.dat" using ($1):($2) title 'p=?' with lines
 
 
 # phase space plot
-set term x11 2 title "Phase Space"  # plot window 2
+set output "diffeq_oscillations_all2.png"
 set timestamp
 set title 'Oscillations: Phase Space'
 set xlabel 'x(t)'
@@ -26,7 +27,7 @@ plot "diffeq_oscillations.dat" using ($2):($3) title 'phase-space plot' with lin
 
 
 # plot the potential
-set term x11 3 title "Potential V(x)"  # plot window 3
+set output "diffeq_oscillations_all3.png"
 set timestamp
 set title 'Oscillations: Potential V(x)'
 set xlabel 'x'
@@ -35,7 +36,7 @@ plot "diffeq_oscillations.dat" using ($2):($5) title 'V(x)' with lines
 
 
 # plot of kinetic energy and potential energy versus time
-set term x11 4 title "Energy"  # plot window 4
+set output "diffeq_oscillations_all4.png"
 set timestamp
 set title 'Oscillations: Energy'
 set xlabel 't'
