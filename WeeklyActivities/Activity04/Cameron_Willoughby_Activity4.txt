@@ -1,4 +1,5 @@
 Numerical Derivatives and Richardson Extrapolation
+Grade: check -
 
 3. You could keep adding different mesh sizes into your calculations to reach a higher order result. 
 
