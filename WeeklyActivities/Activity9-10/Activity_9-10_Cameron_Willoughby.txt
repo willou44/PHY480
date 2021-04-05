@@ -2,10 +2,37 @@ Optimization 101: Squaring a Number
 
 3.
 pow(x,2) took 3.65595 seconds
-x*x's    took 0.328062 seconds *
+x*x's took 0.328062 seconds *
 
 4.
+x*x's took 0.333491 seconds
 squareit's took 0.421662 seconds
 so for that run a difference of 0.088171 seconds
+I would say that the overhead is worthwhile when it is significantly less than the amount of time saved by implementing the funtion (which by nature accounts for readability too.)
 
+5.
+x*x's took 0.33215 seconds
+sqr's took 0.328927 seconds
+
+6.
+square's took 0.423974 seconds
+
+Using a macro seems to be the most efficient way for something small like this
+
+7.
+These times are much much better, and they are over a much smaller range of times.
+final y = 1e+16
+ Evaluating 100000000 pow(x,2)'s took 0.000938 seconds
+
+final y = 1e+16
+ Evaluating 100000000 x*x's took 0.000458 seconds
+
+final y = 1e+16
+ Evaluating 100000000 squareit's took 0.000513 seconds
+
+final y = 1e+16
+ Evaluating 100000000 sqr's took 0.000449 seconds
+
+final y = 1e+16
+ Evaluating 100000000 square's took 0.000424 seconds
 
