@@ -1,0 +1,11 @@
+Optimization 101: Squaring a Number
+
+3.
+pow(x,2) took 3.65595 seconds
+x*x's    took 0.328062 seconds *
+
+4.
+squareit's took 0.421662 seconds
+so for that run a difference of 0.088171 seconds
+
+

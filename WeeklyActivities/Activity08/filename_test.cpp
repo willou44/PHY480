@@ -130,13 +130,23 @@ main (void)
   cout << "Look at " << my_filename_stream.str() 
        << " to see if this worked." << endl << endl;
   ostringstream numfilenamestream;
-  for(int j = 0; j < 3; j++){
+  for(int j = 0; j < 3; j++){ //Looping through and naming files
 	numfilenamestream.str("");
 	numfilenamestream << "This_is_file_" << j <<".out";
 	string numfilename = numfilenamestream.str();
 	ofstream numfile;
 	numfile.open(numfilename.c_str());
+    numfile << "This is file " << j;
 	numfile.close();
 	}
+  double alpha;
+  cin >> alpha;
+  numfilenamestream.str(""); //reusing stream for alpha
+  ofstream alfile;
+  numfilenamestream << "alpha_" << setprecision(3) << alpha << ".out";
+  string alfilename = numfilenamestream.str();
+  alfile.open(alfilename.c_str());
+  alfile << "The original alpha was " << alpha << "But named using " << setprecision(3) << alpha;
+  alfile.close();
   return (0);
 }

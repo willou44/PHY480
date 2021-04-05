@@ -65,7 +65,7 @@ main (void)
   double T_ext = 2. * pi / omega_ext;  // period for external frequency
   double phi_ext = 0.;
   double omega0 = 1.;
-  double alpha = 0.2;
+  double alpha = 0.233;
   double theta0 = 0.8;    // initial (angular) position
   double theta_dot0 = 0.0;      // initial (angular) velocity
 
@@ -165,9 +165,14 @@ main (void)
           
     cout << "Plotting now (wait until complete) . . ." << endl;  
 
+    ostringstream numfilenamestream;// setting up dynamic file name
+    numfilenamestream << "diffeq_pendulum" << setprecision(2) << alpha << ".dat";
+    string numfilename = numfilenamestream.str();
+
+
     // open the output file 
     ofstream out;    // declare the output file
-    out.open ("diffeq_pendulum.dat", ofstream::trunc); 
+    out.open (numfilename, ofstream::trunc); 
 
     // load the force parameters into the structure 
     rhs_parameters.omega0 = omega0;

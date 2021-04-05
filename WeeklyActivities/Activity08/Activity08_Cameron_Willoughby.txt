@@ -1,0 +1,14 @@
+Strings and Things
+
+Everything went well!
+
+Upgrades from the diffeq_oscillation to diffeq_pendulum code
+
+2. I was able to modify the code and verify that it works.
+
+3. Due to my issues with X-term, im having a really hard time getting this step to work, because I tried adding some lines to the GnuplotPipe.cpp code in order to output to PNG, however it failed. Hopefully I can revisit this later.
+
+Damped, Driven Pendulum
+
+Due to the above issue, I'm skipping this section for now. If I am unable to find a solution before Thursday next week, I will see if office hours can help.
+
