@@ -1,0 +1,26 @@
+make -f make_filename_test filename_test
+
+./.x
+
+
+
+load ".plt"
+
+From Chrissy Schumm to Everyone:  09:44 AM
+anyone else on GSL Interpolation Routines? I have no idea how to do Q2
+From Andhika Adiantoro to Everyone:  09:47 AM
+start by declaring an array like this double x_values[npts] = {1.,2.,3.,4.,};
+after that u want to delete the part from the deltax declaration until the for loop that has the sin function in it
+From Chrissy Schumm to Everyone:  09:51 AM
+Ok!
+Is that it for 2? Then the rest of the change to the code is described in Q3
+From Andhika Adiantoro to Everyone:  09:53 AM
+yes q2 is all about declaring array, in q3 we have to write the function based on equation 9.7 in the notes and spline it
+if that makes sense...
+From Chrissy Schumm to Everyone:  09:58 AM
+It does actually :)
+so now we have double x_values[9]= {the x values from the chart}
+From Chrissy Schumm to Everyone:  10:05 AM
+Yep!
+From Chrissy Schumm to Everyone:  10:34 AM
+This gsl interpolation is so annoying.

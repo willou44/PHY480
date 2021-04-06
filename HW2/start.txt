@@ -1,7 +1,0 @@
-make -f make_integ3_test.txt
-
-./integ3_test.x
-
-
-
-load "integ3_plot.plt"
