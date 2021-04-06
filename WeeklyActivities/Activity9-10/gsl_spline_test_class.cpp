@@ -32,7 +32,10 @@ main(void)
     double y_calc[40];
     double sigma_0 = 63900.;
 
-    for (int i = 0; i < 41; i++) {
+    x_calc[0] = 0.;
+    y_calc[0] = sigma_0 / ((-78.) * (-78.) + 756.25);
+
+    for (int i = 1; i < 41; i++) {
         x_calc[i] = i*5.;
         y_calc[i] = sigma_0 / ((x_calc[i] - 78.) * (x_calc[i] - 78.) + 756.25);
         //                   E_r      E_r     gamma^2/4
@@ -47,14 +50,14 @@ main(void)
   //double x;
   //cout << "Enter x: ";
  // cin >> x;    // test point 
-  cout << x_calc[0];
+  cout << x_calc[0] << endl;
   ofstream spline_file;
   spline_file.open("Theoretical_spline_data.dat", ofstream::trunc);
   spline_file << "x" << "       " << "y theoretical" << endl;
   double y[40];
-  for (double i = 0.; i < 201.; i = i + 5.) {
-          y[int(i / 5.)] = my_theo_cubic_spline.y(x_calc[int(i / 5.)]);
-          spline_file << x_calc[int(i / 5.)] << "      " << y[int(i / 5.)] << endl;
+  for (int i = 0; i < 41; i++) {
+      y[i] = my_theo_cubic_spline.y(x_calc[i]);
+          spline_file << x_calc[i] << "      " << y[i] << endl;
 
   }
 

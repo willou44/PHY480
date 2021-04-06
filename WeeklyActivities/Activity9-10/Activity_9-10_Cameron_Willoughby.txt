@@ -37,7 +37,7 @@ final y = 1e+16
  Evaluating 100000000 square's took 0.000424 seconds
 
 GSL Interpolation Routines
-
+I've gotten it to run, sp I know the base logic is right, however after adding my loop to use the class I'm getting an interpolation error.
 
 Command Line Mystery
 It was Jeremy Bowers! That was actually pretty fun!
