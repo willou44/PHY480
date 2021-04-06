@@ -35,6 +35,10 @@ Spline::Spline(double* x_array, double* y_array, int num_pts, std::string type)
   {
     spline_ptr = gsl_spline_alloc (gsl_interp_linear, num_pts);
   }
+  else if (spline_type == "polynomial")
+  {
+      spline_ptr = gsl_spline_alloc(gsl_interp_polynomial, num_pts);
+  }
   else
   {
     std::cout << "Illegal spline type!" << std::endl;

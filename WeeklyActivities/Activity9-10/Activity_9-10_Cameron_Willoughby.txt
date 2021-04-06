@@ -36,3 +36,8 @@ final y = 1e+16
 final y = 1e+16
  Evaluating 100000000 square's took 0.000424 seconds
 
+GSL Interpolation Routines
+
+
+Command Line Mystery
+It was Jeremy Bowers! That was actually pretty fun!
