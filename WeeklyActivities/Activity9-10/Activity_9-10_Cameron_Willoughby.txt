@@ -1,5 +1,8 @@
 Optimization 101: Squaring a Number
 
+GRADE: Check 
+
+
 3.
 pow(x,2) took 3.65595 seconds
 x*x's took 0.328062 seconds *
