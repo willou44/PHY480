@@ -1,5 +1,7 @@
 Strings and Things
 
+Grade: check - (missing plots and analysis)
+
 Everything went well!
 
 Upgrades from the diffeq_oscillation to diffeq_pendulum code
