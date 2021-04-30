@@ -1,3 +1,5 @@
+Note: I was having issues with the makefile eventually, so I did what I am more used to for C++ which is made a visual studio project. All of the required files are included in PHY480/MoneCarlo
+
 When comparing the original montecarlo approximation with a quasi-Monte Carlo using Halton’s sequence, 
 two main metrics should be considered; the arrival at pi, and the machine efficiency.
 
