@@ -1,0 +1,62 @@
+When comparing the original montecarlo approximation with a quasi-Monte Carlo using Halton’s sequence, 
+two main metrics should be considered; the arrival at pi, and the machine efficiency.
+
+For the convergence, the two have no noticable differeces based on the results I got for low iterations.
+
+For bases 2 and 3:
+Pi approx by original MC: 3.24 using 100 iterations took 0 ticks
+Pi approx by Halton  MC: 3.24 using 100 iterations took 0 ticks
+Pi approx by original MC: 3.072 using 250 iterations took 0 ticks
+Pi approx by Halton  MC: 3.072 using 250 iterations took 0 ticks
+Pi approx by original MC: 3.1552 using 625 iterations took 0 ticks
+Pi approx by Halton  MC: 3.1552 using 625 iterations took 0 ticks
+Pi approx by original MC: 3.17798 using 1562 iterations took 0 ticks
+Pi approx by Halton  MC: 3.17798 using 1562 iterations took 1 ticks
+Pi approx by original MC: 3.11396 using 3905 iterations took 1 ticks
+Pi approx by Halton  MC: 3.11396 using 3905 iterations took 1 ticks
+Pi approx by original MC: 3.13296 using 9762 iterations took 2 ticks
+Pi approx by Halton  MC: 3.13296 using 9762 iterations took 2 ticks
+
+For higher iterations, we start seeing an efficiency difference. 
+
+For bases 2 and 3:
+Pi approx by original MC: 3.132 using 10000 iterations took 2 ticks
+Pi approx by Halton  MC: 3.132 using 10000 iterations took 2 ticks
+Pi approx by original MC: 3.15136 using 25000 iterations took 4 ticks
+Pi approx by Halton  MC: 3.15136 using 25000 iterations took 4 ticks
+Pi approx by original MC: 3.14394 using 62500 iterations took 12 ticks
+Pi approx by Halton  MC: 3.14394 using 62500 iterations took 13 ticks
+Pi approx by original MC: 3.14788 using 156250 iterations took 28 ticks
+Pi approx by Halton  MC: 3.14788 using 156250 iterations took 31 ticks
+Pi approx by original MC: 3.13879 using 390625 iterations took 77 ticks
+Pi approx by Halton  MC: 3.13879 using 390625 iterations took 65 ticks
+Pi approx by original MC: 3.14176 using 976562 iterations took 178 ticks
+Pi approx by Halton  MC: 3.14176 using 976562 iterations took 167 ticks
+Pi approx by original MC: 3.14018 using 2441405 iterations took 432 ticks
+Pi approx by Halton  MC: 3.14018 using 2441405 iterations took 418 ticks
+Pi approx by original MC: 3.14204 using 6103512 iterations took 1070 ticks
+Pi approx by Halton  MC: 3.14204 using 6103512 iterations took 1050 ticks
+Pi approx by original MC: 3.14077 using 15258780 iterations took 2709 ticks
+Pi approx by Halton  MC: 3.14077 using 15258780 iterations took 2683 ticks
+
+This shows that by the time we have enough iterations to make an accurate guess of pi, the Halton sequence performs much better.
+
+Lastly, I wanted to see what effect the bases used in the Halton sequence had. Going past base 2 and 3 only seems to result in slowing down:
+Pi approx by original MC: 3.1012 using 10000 iterations took 2 ticks
+Pi approx by Halton  MC: 3.1012 using 10000 iterations took 2 ticks
+Pi approx by original MC: 3.144 using 25000 iterations took 5 ticks
+Pi approx by Halton  MC: 3.144 using 25000 iterations took 4 ticks
+Pi approx by original MC: 3.14317 using 62500 iterations took 13 ticks
+Pi approx by Halton  MC: 3.14317 using 62500 iterations took 12 ticks
+Pi approx by original MC: 3.13823 using 156250 iterations took 28 ticks
+Pi approx by Halton  MC: 3.13823 using 156250 iterations took 32 ticks
+Pi approx by original MC: 3.14822 using 390625 iterations took 66 ticks
+Pi approx by Halton  MC: 3.14822 using 390625 iterations took 73 ticks
+Pi approx by original MC: 3.14015 using 976562 iterations took 175 ticks
+Pi approx by Halton  MC: 3.14015 using 976562 iterations took 168 ticks
+Pi approx by original MC: 3.1419 using 2441405 iterations took 430 ticks
+Pi approx by Halton  MC: 3.1419 using 2441405 iterations took 451 ticks
+Pi approx by original MC: 3.14206 using 6103512 iterations took 1086 ticks
+Pi approx by Halton  MC: 3.14206 using 6103512 iterations took 1112 ticks
+Pi approx by original MC: 3.14219 using 15258780 iterations took 2718 ticks
+Pi approx by Halton  MC: 3.14219 using 15258780 iterations took 2704 ticks
