@@ -1,0 +1,4 @@
+﻿  Montecarlo.cpp
+C:\cygwin64\home\User\PHY480\MonteCarlo\Montecarlo.cpp(36,11): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\cygwin64\home\User\PHY480\MonteCarlo\Montecarlo.cpp(56,40): warning C4244: '*=': conversion from 'double' to 'int', possible loss of data
+  MonteCarlo.vcxproj -> C:\cygwin64\home\User\PHY480\MonteCarlo\Debug\MonteCarlo.exe

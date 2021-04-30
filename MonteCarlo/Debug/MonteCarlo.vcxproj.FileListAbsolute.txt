@@ -1,0 +1,2 @@
+C:\cygwin64\home\User\PHY480\MonteCarlo\Debug\MonteCarlo.exe
+C:\cygwin64\home\User\PHY480\MonteCarlo\Debug\MonteCarlo.pdb
